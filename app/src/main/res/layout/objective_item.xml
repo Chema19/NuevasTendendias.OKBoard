@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/objectiveLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/objTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/titleTextSize"
+        android:layout_marginStart="@dimen/startEndMarginValue"
+        android:layout_marginEnd="@dimen/startEndMarginValue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Objective Title"
+        />
+
+    <TextView
+        android:id="@+id/objDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/startEndMarginValue"
+        android:layout_marginEnd="@dimen/startEndMarginValue"
+        app:layout_constraintTop_toBottomOf="@id/objTitleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Objective Description"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
