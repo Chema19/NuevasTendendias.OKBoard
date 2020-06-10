@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">OKBoard</string>
+    <string name="token">Token</string>
+    <string name="string_preference">Session</string>
 </resources>
