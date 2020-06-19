@@ -5,7 +5,10 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="buttonColorRed">#e7372c</color>
+    <color name="buttonColorGray">#8E8685</color>
     <color name="textPrimary">#212121</color>
-
+    <color name="transparentColor">#00FFFFFF</color>
+    <color name="progressTintColor">#e7372c</color>
+    <color name="progressBackgroundColor">#7BE7372C</color>
 
 </resources>

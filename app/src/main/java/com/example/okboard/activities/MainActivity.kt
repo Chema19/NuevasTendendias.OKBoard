@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.okboard.R
@@ -36,6 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         objectivesRecyclerView.adapter = objectivesAdapter
         objectivesRecyclerView.layoutManager = objectivesLayoutManager
+
+
+        val dividerItemDecoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        objectivesRecyclerView.addItemDecoration(dividerItemDecoration)
 
         fabCreateObjective = findViewById(R.id.addObjectiveFab)
         fabCreateObjective.setOnClickListener { view ->

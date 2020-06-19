@@ -2,4 +2,5 @@
 <resources>
     <dimen name="titleTextSize">25dp</dimen>
     <dimen name="startEndMarginValue">15dp</dimen>
+    <dimen name="secondaryTitleTextSize">20dp</dimen>
 </resources>
