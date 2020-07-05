@@ -30,6 +30,7 @@ class ReadKeyResultActivity : AppCompatActivity() {
 
         val intent=intent?:return
         val keyResult = KeyResult.from(intent.extras!!)
+
         keyResultTitleTextView.text = keyResult.title
         keyResultProgressTextView.text = keyResult.progress.toInt().toString()
         keyResultProgressBar.progress = keyResult.progress.toInt()

@@ -43,6 +43,27 @@ class LoginActivity : AppCompatActivity() {
             val intento = Intent(this, RegisterActivity::class.java)
             startActivity(intento)
         }
+
+        startButton.setOnClickListener {
+            var url: String = OkBoardApi.loginPost
+            var usernameET = userEditText.text.toString()
+            var passwordET = passwordEditText.text.toString()
+
+            if(usernameET == "" && passwordET == ""){
+                Toast.makeText(this, "Complete el campo usuario y contraseña", Toast.LENGTH_SHORT).show()
+            }else {
+                if (usernameET == "" || passwordET == "") {
+                    Toast.makeText(this, "El campo usuario o contraseña esta vacio", Toast.LENGTH_SHORT).show()
+
+                }else {
+                    OkBoardApi.LoginUser(url, usernameET, passwordET,
+                        { response -> handleResponse(response) },
+                        { error -> handleError(error) })
+                }
+            }
+        }
+
+
     }
 
     private fun handleResponse(response: LoginResponse?){
@@ -51,6 +72,7 @@ class LoginActivity : AppCompatActivity() {
         val sp = sharepreferences.edit()
 
         sp.putString(getString(R.string.token), response!!.tokenType + " " + response!!.accessToken)
+        sp.putInt(getString(R.string.user), response.id!!)
         sp.apply()
 
         if (sharepreferences.getBoolean(getString(R.string.string_preference), false)) {

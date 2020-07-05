@@ -1,6 +1,7 @@
 package com.example.okboard.models
 
 import android.os.Bundle
+import androidx.annotation.ArrayRes
 
 data class KeyResult(
     val id: Int,
@@ -14,6 +15,17 @@ data class KeyResult(
                 bundle.getDouble("progress"),
                 bundle.getString("title")
             )
+        }
+        fun fromList(bundle: Bundle): ArrayList<KeyResult>{
+            val list: ArrayList<KeyResult>? = null
+
+            list!!.add(KeyResult(
+                bundle.getInt("id"),
+                bundle.getDouble("progress"),
+                bundle.getString("title")
+            ))
+
+            return list
         }
     }
 

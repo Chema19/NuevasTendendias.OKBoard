@@ -1,24 +1,15 @@
 package com.example.okboard.models
 
 import android.os.Bundle
+import com.example.okboard.responses.KeyResultsResponse
+import java.io.Serializable
+import java.lang.reflect.Array
+import java.util.ArrayList
 
 data class Objective(
     val id:Int,
-    val title:String?
-){
-    companion object {
-        fun from(bundle: Bundle): Objective{
-            return Objective(
-                bundle.getInt("id"),
-                bundle.getString("title")
-            )
-        }
-    }
+    val title:String?,
+    val key_result:ArrayList<KeyResultsResponse>? = null
+): Serializable {
 
-    fun toBundle(): Bundle {
-        val bundle = Bundle()
-        bundle.putInt("id", id)
-        bundle.putString("title", title)
-        return bundle
-    }
 }
